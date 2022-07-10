@@ -1,0 +1,30 @@
+.swiper-button-prev, .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background: #313132;
+    box-shadow: 0px 2px 4px rgba(38, 40, 47, 0.4);
+}
+
+.swiper-button-next::after {
+    content: url('./images/next-icon.png');
+    transform: scale(.9);
+}
+
+
+.swiper-button-prev::after {
+    content: url('./images/prev-icon.png');
+    transform: scale(.9);
+}
+
+.program-thumbnail-wrapper {
+    border-radius: 8px;
+    width: 200px;
+    height: 266px;
+}
+
+.program-name {
+    width: 201px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
