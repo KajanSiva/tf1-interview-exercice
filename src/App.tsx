@@ -51,9 +51,9 @@ const mapProgramsData = (data: ProgramsQuery | undefined): formattedProgram[] =>
 
 const ProgramThumbnail = ({program}: {program: formattedProgram}) => {
   return (
-    <div>
-      <div className="program-thumbnail-wrapper">
-        <img className="program-thumbnail" src={program.thumbnailUrl} alt="" width="100%" />
+    <div className="program-thumbnail-wrapper">
+      <div className="program-thumbnail">
+        <img src={program.thumbnailUrl} alt="" width="100%" />
       </div>
       <p className="program-name">{program.programName}</p>
     </div>
@@ -63,10 +63,6 @@ const ProgramThumbnail = ({program}: {program: formattedProgram}) => {
 function App() {
   const { data, error, loading } = useProgramsQuery();
   const formattedData = React.useMemo(() => mapProgramsData(data), [data])
-
-  console.log("--- data: ", data);
-  console.log("--- error: ", error);
-  console.log("--- loading: ", loading);
 
   if (error) {
     return <p>Une erreur inattendue est survenue.</p>
@@ -79,10 +75,9 @@ function App() {
   return (
     <div className="App">
       <Swiper
-        // install Swiper modules
         modules={[Navigation]}
         spaceBetween={24}
-        slidesPerView={3}
+        slidesPerView={5}
         navigation
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}

@@ -1,3 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+.App {
+    background: #000000;
+    height: 100%;
+    display: flex;
+}
+
 .swiper-button-prev, .swiper-button-next {
     width: 48px;
     height: 48px;
@@ -16,7 +32,12 @@
     transform: scale(.9);
 }
 
-.program-thumbnail-wrapper {
+.swiper-slide {
+    display: flex;
+    align-items: center;
+}
+
+.program-thumbnail {
     border-radius: 8px;
     width: 200px;
     height: 266px;
@@ -27,4 +48,10 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: #FFFFFF;
+
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
 }
