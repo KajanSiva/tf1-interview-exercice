@@ -1,14 +1,11 @@
 import React from 'react';
 import { gql } from '@apollo/client';
 import { ProgramsQuery, useProgramsQuery } from './generated/graphql';
+import { Carousel } from './components/Carousel/Carousel';
 
-import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import './App.css';
 
-type formattedProgram = {
+export type FormattedProgram = {
   programName: string;
   programId: any;
   thumbnailId: any;
@@ -35,7 +32,7 @@ export const QUERY_LAUNCH_LIST = gql`
   }
 `;
 
-const mapProgramsData = (data: ProgramsQuery | undefined): formattedProgram[] => {
+const mapProgramsData = (data: ProgramsQuery | undefined): FormattedProgram[] => {
   if (!data) {
     return []
   }
@@ -47,17 +44,6 @@ const mapProgramsData = (data: ProgramsQuery | undefined): formattedProgram[] =>
     thumbnailAlt: program.thumnail.alt,
     thumbnailUrl: program.thumnail.url
   }))
-}
-
-const ProgramThumbnail = ({program}: {program: formattedProgram}) => {
-  return (
-    <div className="program-thumbnail-wrapper">
-      <div className="program-thumbnail">
-        <img src={program.thumbnailUrl} alt="" width="100%" />
-      </div>
-      <p className="program-name">{program.programName}</p>
-    </div>
-  )
 }
 
 function App() {
@@ -74,20 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={24}
-        slidesPerView={5}
-        navigation
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-      >
-        {formattedData.map((program) => (
-          <SwiperSlide>
-            <ProgramThumbnail program={program} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Carousel items={formattedData} />
     </div>
   );
 }
