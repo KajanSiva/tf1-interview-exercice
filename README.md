@@ -4,8 +4,7 @@ Made by Kajan Siva.
 
 ## Unfinished work
 
-- Choose a different carousel library which will enable to be more precise on the style
-- Add tbe plus icon on the thumbnails
+- Add hover style to the buttons
 - Do some performance improvements
     - To fetch only the necessary images to render
     - To fetch data with a pagination to avoid fetching the whole data at once
@@ -40,6 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - Qu'est-ce qu'on doit afficher lorsque les données chargent ?
 - Est-ce qu'on doit afficher toutes les données dans le carousel ? Niveau UX, 40 semble être un nombre maximum raisonnable d'éléments à afficher dans un carousel. Là je récupère 100 éléments, ce qui me semble beaucoup pour un carousel.
 - Comment traiter les titres qui sont trop long ?
+- Quels sont les effets de survol à appliquer sur les boutons ?
 
 ## Amélioration possible dans le jeu de données
 
@@ -49,9 +49,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Feedback global sur le test
 
 J'ai eu beaucoup de mal à me projeter dans l'exercice à cause de plusieurs aspects.
-La maquette présente beaucoup d'incohérence et aurait nécessité un aller-retour avec l'équipe design avant de commencer le travail.
+
+La maquette présente beaucoup d'incohérence et aurait nécessité un aller-retour avec l'équipe design avant de commencer le travail dans une situation réelle.
 
 Ensuite, vu que tout était à faire de zéro et que je n'avais aucune indication sur les éléments qui comptent le plus, l'exercice a été personnellement plus long qu'estimé. Selon les aspects à tester chez le candidat, ça aurait valu de partir d'un socle de base à faire évoluer.
 
 Enfin, au niveau des questions que je devais préparer. Je n'avais pas compris que je devais les noter directement dans Github. Je pensais que je devais préparer des questions et remarques pour l'échange durant l'entretien.
+
 Et de manière générale, elle me semblent assez flou. Vu que la spécification est minimaliste, je vois beaucoup de questions à poser à ce niveau et je vois les incohérences à remonter sur la maquette, mais j'ai du mal à voir ce qu'on veux tester à travers ces questions.
